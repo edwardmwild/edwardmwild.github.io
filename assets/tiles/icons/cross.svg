@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 492 492" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<path d="M0 0L492 0L492 492L0 492L0 0Z" fill="#cb3b3b" fill-rule="nonzero" opacity="1" stroke="none"/>
+<g id="Layer-1" vectornator:layerName="Layer 1">
+<g opacity="1">
+<path d="M384.384 107.616L107.616 384.384" fill="none" opacity="1" stroke="#a3a3a3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="36"/>
+<path d="M107.616 107.616L384.384 384.384" fill="none" opacity="1" stroke="#a3a3a3" stroke-linecap="butt" stroke-linejoin="round" stroke-width="36"/>
+</g>
+</g>
+</svg>

@@ -12,15 +12,15 @@
 			<key>PayloadDisplayName</key>
 			<string>Profile Removal</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.profileRemovalPassword.905D99C7-997F-4DA8-A330-1CD942AB403F</string>
+			<string>com.apple.profileRemovalPassword.81EBDA33-0A1C-4481-A8A4-D13FB5DD386F</string>
 			<key>PayloadType</key>
 			<string>com.apple.profileRemovalPassword</string>
 			<key>PayloadUUID</key>
-			<string>905D99C7-997F-4DA8-A330-1CD942AB403F</string>
+			<string>81EBDA33-0A1C-4481-A8A4-D13FB5DD386F</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>RemovalPassword</key>
-			<string>d,ppbrloyr5</string>
+			<string>VerySecurePassword1!</string>
 		</dict>
 		<dict>
 			<key>NotificationSettings</key>
@@ -359,7 +359,7 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>A list of password-enforced restrictions to prevent access to certain features on shared devices.</string>
+	<string>A list of password-enforced restrictions to prevent access to certain features on shared devices. Removal password is VSP1</string>
 	<key>PayloadDisplayName</key>
 	<string>shared-restrictions</string>
 	<key>PayloadIdentifier</key>
@@ -371,7 +371,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>07EFAB74-091C-461A-831F-2B4900E0FD35</string>
+	<string>BE93DE74-453E-4D4A-A595-87BE422CCC37</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

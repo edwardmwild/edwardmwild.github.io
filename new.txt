@@ -1,0 +1,33 @@
+Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
+$path = "U:/asset/spain_wp.jpg"
+$setwallpapersrc = @"
+using System.Runtime.InteropServices;
+public class Wallpaper
+{
+  public const int SetDesktopWallpaper = 20;
+  public const int UpdateIniFile = 0x01;
+  public const int SendWinIniChange = 0x02;
+  [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+  private static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+  public static void SetWallpaper(string path)
+  {
+    SystemParametersInfo(SetDesktopWallpaper, 0, path, UpdateIniFile | SendWinIniChange);
+  }
+}
+"@
+Add-Type -TypeDefinition $setwallpapersrc
+[Wallpaper]::SetWallpaper($path)
+Set-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' -Name Desktop -Value 'U:\Desktop'
+$RegistryPath =  'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3'
+$Name = "Settings"
+$NewValue = Get-ItemProperty -Path $RegistryPath
+$NewValue.Settings[12] = 1
+Set-ItemProperty -Path $RegistryPath -Name $Name -Value $NewValue.Settings
+function unpin_taskbar([string]$appname) {
+    ((New-Object -Com Shell.Application).NameSpace('shell:::{4234d49b-0245-4df3-b780-3893943456e1}').Items() |
+        Where-Object{$_.Name -eq $appname}).Verbs() | Where-Object{$_.Name.replace('&','') -match 'Unpin from taskbar'} | ForEach-Object{$_.DoIt()}
+}
+foreach ($taskbarapp in 'Microsoft Store', 'Microsoft Edge') {
+    unpin_taskbar("$taskbarapp")
+}
+Stop-Process -ProcessName explorer -Force

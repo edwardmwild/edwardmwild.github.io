@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>@edwardwild_</title>
-<link rel="icon" href="https://edwardmwild.github.io/favicon.png" type="image/x-icon">
+<link rel="icon" href="favicon.png" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
@@ -16,6 +16,11 @@
         margin: 0; /* Remove default margins */
         padding: 0; /* Remove default padding */
         text-align: left; /* Set text alignment to left */
+    }
+    .flag {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
     }
 
     /* Container styles */
@@ -31,7 +36,7 @@
     .profile-header {
         display: flex; /* Display profile header as flexbox */
         align-items: center; /* Align items vertically */
-        margin-bottom: 40px; /* Add margin at the bottom */
+        margin-bottom: 30px; /* Add margin at the bottom */
     }
 
     /* Profile picture styles */
@@ -190,20 +195,30 @@
 
 <div class="container">
     <div class="profile-header">
-        <img class="profile-picture" src="https://edwardmwild.github.io/profile.jpg" alt="Profile Picture">
+        <img class="profile-picture" src="profile.jpg" alt="Profile Picture">
         <h1>@edwardwild_</h1>
+    </div>
+    <div class="flag">
+        <img src="assets/aro-flag.png" style="width: 20px; margin-right: 5px" alt="Aromantic flag">
+        <span>Aromantic</span>
+    </div>
+    <div class="flag">
+        <img src="assets/ace-flag.png" style="width: 20px; margin-right: 5px" alt="Asexual flag">
+        <span>Asexual</span>
     </div>
     <div class="bio">
         <p>
+            <br>
             tl;dr:
             <br>
             - male, gender-inspecific, & platonic terms good
             <br>
             - female, romantic, & sexual terms bad</p>
-    </div>
+        </div>
     <div class="age">
         <p id="user-age">Please enable Javascript to calculate age.</p>
     </div>
+
     <div class="timezone">
         <!-- <p id="user-timezone">Timezone: Calculating...</p> -->
         <p id="user-date">Please enable Javascript to calculate date + time.</p>

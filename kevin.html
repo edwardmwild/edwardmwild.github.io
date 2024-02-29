@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yes.</title>
+  <title>The Age of Exploration</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
   <style>
     body {
@@ -21,10 +21,19 @@
   </style>
 </head>
 <body>
-  <h1>hhe age of hxplorahion</h1>
-  <audio autoplay loop>
-    <source src="assets/kevin-1.mp3" type="audio/mpeg">
+  <h1>the age of hhhxploration</h1>
+  <button id="playButton">Play Audio</button>
+  <audio id="audio" loop controls style="display: none;">
+    <source src="https://edwardmwild.github.io/assets/kevin-1.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      var audio = document.getElementById('audio');
+      audio.play();
+      audio.style.display = 'block'; // Show the audio element
+      this.style.display = 'none'; // Hide the play button once clicked
+    });
+  </script>
 </body>
 </html>

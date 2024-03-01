@@ -1,102 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Age of Exploration</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
-  <style>
-    body {
-      color: #fff;
-      font-family: 'Roboto Mono', monospace;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #000; /* Set initial background color to black */
-      /* transition: background-color 0.5s ease; Add transition for smoother color change */
-      position: relative; /* Make the body position relative for absolute positioning of random words */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Age of Exploration</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
+    <style>
+        body {
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            /* Set initial background color to black */
+            /* transition: background-color 0.5s ease; Add transition for smoother color change */
+            position: relative;
+            /* Make the body position relative for absolute positioning of random words */
+        }
 
-    #epilepsyWarning {
-      background-color: #ff0000;
-      color: #fff;
-      padding: 10px;
-      font-size: 16px;
-      font-weight: bold;
-    }
+        #epilepsyWarning {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-    #playButton {
-      margin-left: 20px; /* Add spacing to the left of the button */
-    }
+        #playButton {
+            margin-left: 20px;
+            /* Add spacing to the left of the button */
+        }
 
-    .randomWord {
-      position: absolute;
-      font-size: 24px;
-      color: #fff;
-    }
-  </style>
+        .randomWord {
+            position: absolute;
+            font-size: 24px;
+            color: #fff;
+        }
+    </style>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-14MZJJ1K4L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-14MZJJ1K4L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-14MZJJ1K4L');
-</script>
+        gtag('config', 'G-14MZJJ1K4L');
+    </script>
 </head>
+
 <body>
-  <div id="epilepsyWarning">!! EPILEPSY WARNING !!</div>
-  <!-- <h1>The Age of Exploration</h1> -->
-  <button id="playButton">CLICK ME NOW</button>
-  <audio id="audio" loop controls style="display: none;">
-    <source src="https://edwardmwild.github.io/assets/kevin-1.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <script>
-    function displayRandomWord() {
-      var words = ['WOW', 'MUCH LOVE', 'VERY AMAZE', 'DOGE', 'SUCH RAINBOW', '1 SHIBES', '2 SHIBES', '3 SHIBES', '4 SHIBES', '5 SHIBES', 'WOW', 'MUCH LOVE', 'VERY AMAZE', 'DOGE', 'SUCH RAINBOW', ]; // doge words
-      var randomWord = words[Math.floor(Math.random() * words.length)];
-      var randomWordElement = document.createElement('div');
-      randomWordElement.textContent = randomWord;
-      randomWordElement.classList.add('randomWord');
-      randomWordElement.style.left = Math.random() * (window.innerWidth - randomWordElement.offsetWidth) + 'px'; // Random horizontal position
-      randomWordElement.style.top = Math.random() * (window.innerHeight - randomWordElement.offsetHeight) + 'px'; // Random vertical position
-      document.body.appendChild(randomWordElement);
-      setTimeout(function() {
-        randomWordElement.remove(); // Remove the element after 2 seconds
-      }, 2000);
-    }
+    <div id="epilepsyWarning">!! EPILEPSY WARNING !!</div>
+    <!-- <h1>The Age of Exploration</h1> -->
+    <button id="playButton">CLICK ME NOW</button>
+    <audio id="audio" loop controls style="display: none;">
+        <source src="https://edwardmwild.github.io/assets/kevin-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        function displayRandomWord() {
+            var words = ['WOW', 'MUCH LOVE', 'VERY AMAZE', 'DOGE', 'SUCH RAINBOW', '1 SHIBES', '2 SHIBES', '3 SHIBES', '4 SHIBES', '5 SHIBES', 'WOW', 'MUCH LOVE', 'VERY AMAZE', 'DOGE', 'SUCH RAINBOW',]; // doge words
+            var randomWord = words[Math.floor(Math.random() * words.length)];
+            var randomWordElement = document.createElement('div');
+            randomWordElement.textContent = randomWord;
+            randomWordElement.classList.add('randomWord');
+            randomWordElement.style.left = Math.random() * (window.innerWidth - randomWordElement.offsetWidth) + 'px'; // Random horizontal position
+            randomWordElement.style.top = Math.random() * (window.innerHeight - randomWordElement.offsetHeight) + 'px'; // Random vertical position
+            document.body.appendChild(randomWordElement);
+            setTimeout(function () {
+                randomWordElement.remove(); // Remove the element after 2 seconds
+            }, 2000);
+        }
 
-    document.getElementById('playButton').addEventListener('click', function() {
-      var audio = document.getElementById('audio');
-      audio.play();
-      audio.style.display = 'block'; // Show the audio element
-      this.style.display = 'none'; // Hide the play button once clicked
+        document.getElementById('playButton').addEventListener('click', function () {
+            var audio = document.getElementById('audio');
+            audio.play();
+            audio.style.display = 'none'; // Hide the audio element
+            this.style.display = 'none'; // Hide the play button once clicked
 
-      // Hide the epilepsy warning
-      document.getElementById('epilepsyWarning').style.display = 'none';
+            // Hide the epilepsy warning
+            document.getElementById('epilepsyWarning').style.display = 'none';
 
-      // Display random words
-      setInterval(displayRandomWord, 100); // Display a new word every second
-      
-      // Function to change background color in a loop
-      var colors = ['#770000', '#772700', '#777700', '#007700', '#000077', '#220077', '#770077']; // Rainbow colors
-      var currentIndex = 0;
-      var body = document.body;
+            // Display random words
+            setInterval(displayRandomWord, 100); // Display a new word every second
 
-      function changeBackgroundColor() {
-        body.style.backgroundColor = colors[currentIndex];
-        currentIndex = (currentIndex + 1) % colors.length;
-        setTimeout(changeBackgroundColor, 10); // Change color every 1 second
-      }
+            // Function to change background color in a loop
+            var colors = ['#770000', '#772700', '#777700', '#007700', '#000077', '#220077', '#770077']; // Rainbow colors
+            var currentIndex = 0;
+            var body = document.body;
 
-      changeBackgroundColor(); // Start the color changing loop
-    });
-  </script>
+            function changeBackgroundColor() {
+                body.style.backgroundColor = colors[currentIndex];
+                currentIndex = (currentIndex + 1) % colors.length;
+                setTimeout(changeBackgroundColor, 10); // Change color every 1 second
+            }
+
+            changeBackgroundColor(); // Start the color changing loop
+        });
+    </script>
 </body>
+
 </html>

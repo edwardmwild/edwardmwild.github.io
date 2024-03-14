@@ -1,0 +1,240 @@
+body {
+    --primary: #008080;
+    --secondary: #006666;
+    --bg: #1a1a1a;
+    background-color: var(--bg);
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.teal-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.teal-button:hover {
+    background-color: var(--secondary);
+}
+
+.teal-link {
+    color: var(--primary);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.teal-link:hover {
+    color: var(--secondary);
+}
+
+body {
+    background-color: #121212; /* Set background color to dark grey */
+    color: #fff; /* Set text color to white */
+    font-family: 'Roboto Mono', monospace; /* Set font family */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    text-align: left; /* Set text alignment to left */
+}
+.flag {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* Container styles */
+.pronouns-container {
+    width: 95%; /* Set container width */
+    max-width: 1200px; /* Set maximum container width */
+    margin: 20px auto; /* Center container horizontally */
+    padding: 20px; /* Add padding to container */
+    border-bottom: 1px solid #555; /* Add border at the bottom */
+}
+
+/* Profile header styles */
+.profile-header {
+    display: flex; /* Display profile header as flexbox */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 30px; /* Add margin at the bottom */
+}
+
+/* Profile picture styles */
+.profile-picture {
+    width: 100px; /* Set profile picture width */
+    height: 100px; /* Set profile picture height */
+    border-radius: 50%; /* Make profile picture circular */
+    margin-right: 20px; /* Add margin on the right */
+}
+
+/* Bio styles */
+.bio {
+    text-align: left; /* Set text alignment to left */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+/* Age, timezone, words, and footer styles */
+.age,
+.timezone,
+.words,
+.footer {
+    margin-top: 20px; /* Add margin at the top */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+/* Words section heading styles */
+.words h3 {
+    font-size: 28px; /* Set font size */
+    font-weight: bold; /* Set font weight to bold */
+    margin-bottom: 10px; /* Add margin at the bottom */
+}
+
+/* Words section heading styles */
+.words h2 {
+    font-size: 18px; /* Set font size */
+    font-weight: normal; /* Set font weight to bold */
+    margin-bottom: 10px; /* Add margin at the bottom */
+}
+
+/* Group styles */
+.group {
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+/* Columns styles */
+.columns {
+    display: flex; /* Display columns as flexbox */
+    flex-wrap: wrap; /* Allow columns to wrap */
+}
+
+/* Column styles */
+.column {
+    flex: 1; /* Set columns to grow equally */
+    max-width: calc(25% - 20px); /* Set maximum width for four columns */
+    margin-right: 20px; /* Add margin on the right */
+}
+
+/* Last column styles */
+.column:last-child {
+    margin-right: 0; /* Remove margin on the right for last column */
+}
+
+/* Footer styles */
+.footer {
+    text-align: center; /* Set text alignment to center */
+    font-size: 14px; /* Set font size */
+    color: #888; /* Set text color to grey */
+}
+
+/* Footer paragraph styles */
+.footer p {
+    margin: 5px 0; /* Add margin */
+}
+
+/* Teal text color styles */
+.teal {
+    vertical-align: top; /* Align icons vertically */
+    color: #00ADB5; /* Set text color to teal */
+    font-weight: bold; /* Set font weight to bold */
+}
+
+/* White text color styles */
+.white {
+    vertical-align: top; /* Align icons vertically */
+    color: #fff; /* Set text color to white */
+}
+
+/* Grey text color styles */
+.grey {
+    color: #808080; /* Set text color to grey */
+    font-style: italic; /* Set font style to italic */
+    vertical-align: middle; /* Align icons vertically */
+}
+
+/* Pale red text color styles */
+.pale-red {
+    vertical-align: top; /* Align icons vertically */
+    color: #FF6B6B; /* Set text color to pale red */
+}
+
+/* Material icons styles */
+.material-icons {
+    margin-right: 3px; /* Add margin on the right */
+    font-size: 18px; /* Set font size */
+    position: relative; /* Set position to relative */
+    padding-right: 3px;
+}
+
+/* Icon tooltip styles */
+.icon-tooltip {
+    display: none; /* Hide tooltip by default */
+    position: absolute; /* Set position to absolute */
+    background-color: #333; /* Set background color */
+    color: #fff; /* Set text color to white */
+    padding: 5px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+    font-size: 12px; /* Set font size */
+    font-family: 'Roboto Mono', monospace; /* Set font family */
+    bottom: -25px; /* Position tooltip at the bottom */
+    left: 50%; /* Position tooltip at the center horizontally */
+    transform: translateX(-50%); /* Center tooltip horizontally */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Show tooltip on hover */
+.material-icons:hover + .icon-tooltip {
+    display: block; /* Display tooltip on hover */
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 768px) {
+    .column {
+        max-width: calc(50% - 20px); /* Adjusted width for two columns */
+    }
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+    /* Increase profile picture size */
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+    /* Center profile picture and username */
+    .profile-picture,
+    .profile-header h1 {
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* Adjust column styles for single column */
+    .column {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px; /* Added margin-bottom for spacing */
+    }
+}

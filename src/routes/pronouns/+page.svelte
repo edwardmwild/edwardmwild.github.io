@@ -1,222 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>@edwardwild_</title>
-<link rel="icon" href="favicon.png" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<style>
-    /* Global styles */
-    body {
-        background-color: #121212; /* Set background color to dark grey */
-        color: #fff; /* Set text color to white */
-        font-family: 'Roboto Mono', monospace; /* Set font family */
-        margin: 0; /* Remove default margins */
-        padding: 0; /* Remove default padding */
-        text-align: left; /* Set text alignment to left */
-    }
-    .flag {
-        display: flex;
-        align-items: center;
-        margin-left: 10px;
-    }
-
-    /* Container styles */
-    .container {
-        width: 95%; /* Set container width */
-        max-width: 1200px; /* Set maximum container width */
-        margin: 20px auto; /* Center container horizontally */
-        padding: 20px; /* Add padding to container */
-        border-bottom: 1px solid #555; /* Add border at the bottom */
-    }
-
-    /* Profile header styles */
-    .profile-header {
-        display: flex; /* Display profile header as flexbox */
-        align-items: center; /* Align items vertically */
-        margin-bottom: 30px; /* Add margin at the bottom */
-    }
-
-    /* Profile picture styles */
-    .profile-picture {
-        width: 100px; /* Set profile picture width */
-        height: 100px; /* Set profile picture height */
-        border-radius: 50%; /* Make profile picture circular */
-        margin-right: 20px; /* Add margin on the right */
-    }
-
-    /* Bio styles */
-    .bio {
-        text-align: left; /* Set text alignment to left */
-        margin-bottom: 20px; /* Add margin at the bottom */
-    }
-
-    /* Age, timezone, words, and footer styles */
-    .age,
-    .timezone,
-    .words,
-    .footer {
-        margin-top: 20px; /* Add margin at the top */
-        margin-bottom: 20px; /* Add margin at the bottom */
-    }
-
-    /* Words section heading styles */
-    .words h3 {
-        font-size: 28px; /* Set font size */
-        font-weight: bold; /* Set font weight to bold */
-        margin-bottom: 10px; /* Add margin at the bottom */
-    }
-
-    /* Words section heading styles */
-    .words h2 {
-        font-size: 18px; /* Set font size */
-        font-weight: normal; /* Set font weight to bold */
-        margin-bottom: 10px; /* Add margin at the bottom */
-    }
-
-    /* Group styles */
-    .group {
-        margin-bottom: 20px; /* Add margin at the bottom */
-    }
-
-    /* Columns styles */
-    .columns {
-        display: flex; /* Display columns as flexbox */
-        flex-wrap: wrap; /* Allow columns to wrap */
-    }
-
-    /* Column styles */
-    .column {
-        flex: 1; /* Set columns to grow equally */
-        max-width: calc(25% - 20px); /* Set maximum width for four columns */
-        margin-right: 20px; /* Add margin on the right */
-    }
-
-    /* Last column styles */
-    .column:last-child {
-        margin-right: 0; /* Remove margin on the right for last column */
-    }
-
-    /* Footer styles */
-    .footer {
-        text-align: center; /* Set text alignment to center */
-        font-size: 14px; /* Set font size */
-        color: #888; /* Set text color to grey */
-    }
-
-    /* Footer paragraph styles */
-    .footer p {
-        margin: 5px 0; /* Add margin */
-    }
-
-    /* Teal text color styles */
-    .teal {
-        vertical-align: top; /* Align icons vertically */
-        color: #00ADB5; /* Set text color to teal */
-        font-weight: bold; /* Set font weight to bold */
-    }
-
-    /* White text color styles */
-    .white {
-        vertical-align: top; /* Align icons vertically */
-        color: #fff; /* Set text color to white */
-    }
-
-    /* Grey text color styles */
-    .grey {
-        color: #808080; /* Set text color to grey */
-        font-style: italic; /* Set font style to italic */
-        vertical-align: middle; /* Align icons vertically */
-    }
-
-    /* Pale red text color styles */
-    .pale-red {
-        vertical-align: top; /* Align icons vertically */
-        color: #FF6B6B; /* Set text color to pale red */
-    }
-
-    /* Material icons styles */
-    .material-icons {
-        margin-right: 3px; /* Add margin on the right */
-        font-size: 18px; /* Set font size */
-        position: relative; /* Set position to relative */
-        padding-right: 3px;
-    }
-
-    /* Icon tooltip styles */
-    .icon-tooltip {
-        display: none; /* Hide tooltip by default */
-        position: absolute; /* Set position to absolute */
-        background-color: #333; /* Set background color */
-        color: #fff; /* Set text color to white */
-        padding: 5px; /* Add padding */
-        border-radius: 5px; /* Add border radius */
-        font-size: 12px; /* Set font size */
-        font-family: 'Roboto Mono', monospace; /* Set font family */
-        bottom: -25px; /* Position tooltip at the bottom */
-        left: 50%; /* Position tooltip at the center horizontally */
-        transform: translateX(-50%); /* Center tooltip horizontally */
-        white-space: nowrap; /* Prevent wrapping */
-    }
-
-    /* Show tooltip on hover */
-    .material-icons:hover + .icon-tooltip {
-        display: block; /* Display tooltip on hover */
-    }
-
-    /* Media query for tablets */
-    @media only screen and (max-width: 768px) {
-        .column {
-            max-width: calc(50% - 20px); /* Adjusted width for two columns */
-        }
-    }
-
-    /* Media query for mobile devices */
-    @media only screen and (max-width: 480px) {
-        /* Increase profile picture size */
-        .profile-picture {
-            width: 150px;
-            height: 150px;
-        }
-        /* Center profile picture and username */
-        .profile-picture,
-        .profile-header h1 {
-            margin: 0 auto;
-            text-align: center;
-        }
-        /* Adjust column styles for single column */
-        .column {
-            max-width: 100%;
-            margin-right: 0;
-            margin-bottom: 20px; /* Added margin-bottom for spacing */
-        }
-    }
-</style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-14MZJJ1K4L"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    // User's birthday (YYYY-MM-DD format)
+    const birthday = '2008-08-21';
 
-  gtag('config', 'G-14MZJJ1K4L');
+    // User's timezone
+    const timezone = 'Europe/London';
+
+    // Function to calculate age based on birthday
+    /**
+	 * @param {string | number | Date} birthday
+	 */
+    function calculateAge(birthday) {
+        const today = new Date();
+        const birthDate = new Date(birthday);
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
+    /**
+	 * @param {any} timezone
+	 */
+    function getCurrentDateTime(timezone) {
+        const options = {
+            timeZone: timezone,
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+        };
+        // @ts-ignore
+        return new Intl.DateTimeFormat('en-US', options).format(new Date());
+    }
 </script>
-</head>
-<body>
 
-<div class="container">
+<div class="pronouns-container">
     <div class="profile-header">
+        <!-- svelte-ignore a11y-img-redundant-alt -->
         <img class="profile-picture" src="profile.jpg" alt="Profile Picture">
         <h1>@edwardwild_</h1>
     </div>
     <div class="flag">
-        <img src="assets/aro-flag.png" style="width: 20px; margin-right: 5px" alt="Aromantic flag">
+        <img src="aro-flag.png" style="width: 20px; margin-right: 5px" alt="Aromantic flag">
         <span>Aromantic</span>
     </div>
     <div class="flag">
-        <img src="assets/ace-flag.png" style="width: 20px; margin-right: 5px" alt="Asexual flag">
+        <img src="ace-flag.png" style="width: 20px; margin-right: 5px" alt="Asexual flag">
         <span>Asexual</span>
     </div>
     <div class="bio">
@@ -229,12 +61,12 @@
             - female, romantic, & sexual terms bad</p>
         </div>
     <div class="age">
-        <p id="user-age">Please enable Javascript to calculate age.</p>
+        <p id="user-age">Age: I am currently {calculateAge(birthday)} years old.</p>
     </div>
 
     <div class="timezone">
         <!-- <p id="user-timezone">Timezone: Calculating...</p> -->
-        <p id="user-date">Please enable Javascript to calculate date + time.</p>
+        <p id="user-date">Date & Time: In my timezone ({timezone}), it is currently {getCurrentDateTime(timezone)}</p>
     </div>
     <div class="words">
         <div class="group">
@@ -272,7 +104,7 @@
                         mx.
                         ma'am
                         madam -->
-                        <h2 class="column-heading">Honorifics/Titles</h3>
+                        <h2 class="column-heading">Honorifics/Titles</h2>
                         <p><span class="material-icons teal" title="preferred">favorite</span><span class="teal" title="preferred">[no honorific]</span></p>
                         <p><span class="material-icons teal" title="preferred">favorite</span><span class="teal" title="preferred">mr.</span></p>
                         <p><span class="material-icons white" title="okay">thumb_up</span><span class="white" title="okay">sir</span></p>
@@ -293,7 +125,7 @@
                             woman
                             lady
                             girl -->
-                            <h2 class="column-heading">Person & Family descriptions</h3>
+                            <h2 class="column-heading">Person & Family descriptions</h2>
                                 <p><span class="material-icons white" title="okay">thumb_up</span><span class="white" title="okay">person</span></p>
                                 <p><span class="material-icons white" title="okay">thumb_up</span><span class="white" title="okay">man</span></p>
                                 <p><span class="material-icons white" title="okay">thumb_up</span><span class="white" title="okay">mate</span></p>
@@ -307,7 +139,7 @@
                                 <p><span class="material-icons pale-red" title="i will unalive you">highlight_off</span><span class="pale-red" title="i will unalive you">girl</span></p>
                             </div>
                             <div class="column">
-                                <h2 class="column-heading">Compliments</h3>
+                                <h2 class="column-heading">Compliments</h2>
                                     <p><span class="material-icons teal" title="preferred">favorite</span><span class="teal" title="preferred">pretty</span></p>
                                     <p><span class="material-icons white" title="okay">thumb_up</span><span class="white" title="okay">handsome</span></p>
                                     <p><span class="material-icons grey" title="try not to">thumb_down</span><span class="grey" title="try not to">cute</span></p>
@@ -321,7 +153,7 @@
                                         husband
                                         darling
                                         wife -->
-                                        <h2 class="column-heading">Relationship descriptions</h3>
+                                        <h2 class="column-heading">Relationship descriptions</h2>
                                             <p><span class="material-icons teal" title="preferred">favorite</span><span class="teal" title="preferred">friend</span></p>
                                             <p><span class="material-icons white" title="okay">thumb_up</span><span class="white" title="okay">boyfriend (if we're "dating")</span></p>
                                             <p><span class="material-icons grey" title="try not to">thumb_down</span><span class="grey" title="try not to">darling</span></p>
@@ -341,48 +173,3 @@
         </p>
     </div>
 </div>
-
-<script>
-    // User's birthday (YYYY-MM-DD format)
-    const birthday = '2008-08-21';
-
-    // User's timezone
-    const timezone = 'Europe/London';
-
-    // Function to calculate age based on birthday
-    function calculateAge(birthday) {
-        const today = new Date();
-        const birthDate = new Date(birthday);
-        let age = today.getFullYear() - birthDate.getFullYear();
-        const monthDiff = today.getMonth() - birthDate.getMonth();
-        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-        }
-        return age;
-    }
-
-    // Function to get current date and time in the user's timezone
-    function getCurrentDateTime(timezone) {
-        const options = {
-            timeZone: timezone,
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: 'numeric',
-            minute: 'numeric',
-            second: 'numeric'
-        };
-        return new Intl.DateTimeFormat('en-US', options).format(new Date());
-    }
-
-    // Update user's age on the page
-    document.getElementById('user-age').innerText = 'Age: I am currently ' + calculateAge(birthday) + ' years old.';
-
-    // Update user's timezone and current date & time on the page
-    // document.getElementById('user-timezone').innerText = 'Timezone: ' + timezone;
-    document.getElementById('user-date').innerText = 'Date & Time: In my timezone (Europe/London), it is currently ' + getCurrentDateTime(timezone);
-</script>
-
-</body>
-</html>

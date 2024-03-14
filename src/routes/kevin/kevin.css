@@ -1,0 +1,35 @@
+body {
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    /* Set initial background color to black */
+    /* transition: background-color 0.5s ease; Add transition for smoother color change */
+    position: relative;
+    /* Make the body position relative for absolute positioning of random words */
+}
+
+#epilepsyWarning {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#playButton {
+    margin-left: 20px;
+    /* Add spacing to the left of the button */
+}
+
+.randomWord {
+    position: absolute;
+    font-size: 24px;
+    color: #fff;
+}

@@ -1,0 +1,5 @@
+$RegPath = 'HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3'
+$RegValues = (Get-ItemProperty -Path $RegPath).Settings
+$RegValues[8] = 2
+Set-ItemProperty -Path $RegPath -Name Settings -Value $RegValues
+Stop-Process -Name explorer -Force
